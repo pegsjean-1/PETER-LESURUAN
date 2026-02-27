@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter Lesuruan | Land Surveyor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1f2937; }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: #0b3c6d;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo { font-weight: 700; font-size: 1.3rem; }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: #fbbf24; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1581090700227-1e8a0e6e7c8b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      padding: 120px 8%;
+      text-align: left;
+    }
+
+    .hero h1 { font-size: 2.6rem; margin-bottom: 12px; }
+    .hero p { margin-bottom: 24px; max-width: 600px; }
+
+    .btn {
+      display: inline-block;
+      background: #fbbf24;
+      color: #111827;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover { background: #f59e0b; }
+
+    /* SECTION */
+    section { padding: 70px 8%; }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0b3c6d;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 { margin-bottom: 12px; color: #0b3c6d; }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 14px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project p { text-align: center; margin-top: 8px; font-weight: 600; }
+
+    /* CONTACT */
+    .contact-box {
+      background: #f3f4f6;
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+
+    footer {
+      background: #0b3c6d;
+      color: white;
+      text-align: center;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Peter Lesuruan</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Professional Land Surveying Services</h1>
+    <p>Accurate and reliable survey solutions across Kenya. We deliver precise boundary, topographic, and construction surveys you can trust.</p>
+    <a href="#contact" class="btn">Get a Free Quote</a>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Boundary Surveys</h3>
+        <p>Accurate boundary identification for land ownership, subdivision, and dispute resolution.</p>
+      </div>
+      <div class="card">
+        <h3>Topographic Surveys</h3>
+        <p>Detailed land mapping to support planning, engineering, and construction projects.</p>
+      </div>
+      <div class="card">
+        <h3>Construction Surveys</h3>
+        <p>Precise site layout and setting out to ensure your project is built correctly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Recent Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Property Survey">
+        <p>Property Survey</p>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=800&q=80" alt="Road Mapping">
+        <p>Road Mapping</p>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c7f27c63c9c?auto=format&fit=crop&w=800&q=80" alt="Site Inspection">
+        <p>Site Inspection</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-box">
+      <p><strong>Phone:</strong> +254 725 560802</p>
+      <p><strong>Email:</strong> pegsjean@gmail.com</p>
+      <p><strong>Location:</strong> Maralal Town, Kenya</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Peter Lesuruan. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
