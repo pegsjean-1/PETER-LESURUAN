@@ -1,0 +1,19 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Peter Lesuruan | Professional Land Surveyor</title>
+
+  <!-- BASIC SEO -->
+  <meta name="description" content="Peter Lesuruan is a professional land surveyor offering boundary surveys, topographic surveys, subdivision, and construction setting out across Kenya.">
+
+  <!-- WHATSAPP / FACEBOOK PREVIEW FIX -->
+  <meta property="og:title" content="Peter Lesuruan | Professional Land Surveyor">
+  <meta property="og:description" content="Accurate and reliable land surveying services including boundary surveys, topographic surveys, subdivision, and construction setting out across Kenya.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pegsjean-1.github.io/">
+  <meta property="og:image" content="https://pegsjean-1.github.io/images/boundary-survey.jpg">
+
+  <!-- MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
