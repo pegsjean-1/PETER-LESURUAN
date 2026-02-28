@@ -1,0 +1,99 @@
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Projects - Peter Lesuruan, Land Surveyor</title>
+    <meta name="description" content="View recent land surveying projects by Peter Lesuruan in Kenya, including boundary surveys, topographic mapping, and construction layout.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Peter Lesuruan</h1>
+                <p>Land Surveyor</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Recent Projects</h1>
+            <p>A sample of our work across Kenya</p>
+        </section>
+
+        <section class="project-gallery">
+            <div class="project-item">
+                <img src="images/project1.jpg" alt="Boundary survey in Maralal" class="project-img">
+                <div class="project-overlay">
+                    <h3>Boundary Survey - Maralal</h3>
+                    <p>40-acre farm subdivision for family trust. Delivered within 5 days.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project2.jpg" alt="Topographic mapping for road" class="project-img">
+                <div class="project-overlay">
+                    <h3>Road Mapping - Samburu County</h3>
+                    <p>Topographic survey for 15km rural road improvement project.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project3.jpg" alt="Construction layout" class="project-img">
+                <div class="project-overlay">
+                    <h3>Construction Layout - Maralal</h3>
+                    <p>Site stakeout for new mixed-use commercial building.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project4.jpg" alt="GIS mapping" class="project-img">
+                <div class="project-overlay">
+                    <h3>GIS Mapping - Baragoi</h3>
+                    <p>Digital mapping for community land use planning.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project5.jpg" alt="Dispute resolution" class="project-img">
+                <div class="project-overlay">
+                    <h3>Boundary Dispute - Wamba</h3>
+                    <p>Expert survey for court case, resolved in client's favor.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/project6.jpg" alt="As-built survey" class="project-img">
+                <div class="project-overlay">
+                    <h3>As-Built Survey - Lodwar</h3>
+                    <p>Verification of new school construction for government funding.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Peter Lesuruan</h3>
+                <p>Professional Land Surveyor</p>
+                <p>License #: SK12345</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>📞 +254 725 560802</p>
+                <p>✉️ pegsjean@gmail.com</p>
+                <p>📍 Maralal Town, Kenya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Peter Lesuruan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>           
