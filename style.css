@@ -1,0 +1,170 @@
+/* style.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+  line-height: 1.6;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a6ebd; /* Blue theme */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8em;
+}
+
+.navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .nav-menu li a.active,
+.navbar .nav-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e1f0ff;
+}
+
+.hero h2 {
+  color: #0a6ebd;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #0a6ebd;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero .hero-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
+section h2 {
+  color: #0a6ebd;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about p,
+.services ul,
+.projects p,
+.contact-cta p {
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+  text-align: center;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services ul li {
+  background-color: #d8e9f7;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Projects Grid */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project {
+  background-color: #e1f0ff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Contact CTA */
+.contact-cta .btn {
+  display: inline-block;
+  background-color: #0a6ebd;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #0a6ebd;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
