@@ -1,103 +1,196 @@
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Peter Lesuruan | Professional Land Surveyor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Peter Lesuruan is a professional land surveyor providing boundary surveys, topographic surveys, subdivision, and construction setting out across Kenya.">
-  <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Lesuruan | Professional Land Surveyor & Geomatics Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* GREEN THEME VARIABLES */
+        :root {
+            --primary: #1a5a2f;
+            --secondary: #2d8a4a;
+            --accent: #7ed957;
+            --light: #f0f9f4;
+            --dark: #0f2f1a;
+            --text: #2c4f3a;
+            --border: rgba(26, 90, 47, 0.1);
+        }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--light); overflow-x: hidden; }
+        h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+
+        /* NAVIGATION */
+        nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom:1px solid var(--border); z-index:1000;}
+        .nav-container { max-width:1200px; margin:0 auto; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-family:'Space Grotesk',sans-serif; font-size:1.5rem; font-weight:700; color: var(--primary); text-decoration:none; display:flex; align-items:center; gap:0.5rem;}
+        .logo::before { content:"◈"; color: var(--accent); font-size:1.8rem; }
+        .nav-links { display:flex; gap:2.5rem; list-style:none; }
+        .nav-links a { text-decoration:none; color:var(--text); font-weight:500; font-size:0.95rem; position:relative; transition:color 0.3s; }
+        .nav-links a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:2px; background:var(--accent); transition:width 0.3s; }
+        .nav-links a:hover::after { width:100%; }
+
+        /* HERO SECTION */
+        .hero { margin-top:80px; min-height:90vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; background: linear-gradient(135deg, var(--light) 0%, #e0f5e8 100%); position:relative; overflow:hidden; padding:2rem; }
+        .hero-content { padding:4rem; z-index:1; }
+        .hero-badge { display:inline-block; background: var(--accent); color: var(--dark); padding:0.5rem 1rem; border-radius:50px; font-size:0.85rem; font-weight:600; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:1px; }
+        .hero h1 { font-size:3.5rem; line-height:1.1; color: var(--primary); margin-bottom:1.5rem; font-weight:700; }
+        .hero h1 span { color: var(--accent); }
+        .hero-description { font-size:1.2rem; color: var(--text); margin-bottom:2rem; max-width:500px; line-height:1.8; }
+        .cta-group { display:flex; gap:1rem; flex-wrap:wrap; }
+        .btn-primary { background: var(--primary); color:white; padding:1rem 2.5rem; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block; position:relative; overflow:hidden; }
+        .btn-primary:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(26,90,47,0.3); }
+        .btn-secondary { background:transparent; color: var(--primary); padding:1rem 2.5rem; border:2px solid var(--primary); border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; text-decoration:none; display:inline-block; }
+        .btn-secondary:hover { background: var(--primary); color:white; }
+
+        /* SERVICES SECTION */
+        .services { padding:6rem 2rem; background: var(--light); }
+        .container { max-width:1200px; margin:0 auto; }
+        .section-header { text-align:center; margin-bottom:4rem; }
+        .section-tag { color: var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:2px; font-size:0.9rem; margin-bottom:1rem; display:block; }
+        .section-title { font-size:2.5rem; color: var(--primary); margin-bottom:1rem; }
+        .section-subtitle { color: var(--text); opacity:0.8; max-width:600px; margin:0 auto; }
+        .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px,1fr)); gap:2rem; }
+        .service-card { background: var(--light); border:1px solid var(--border); border-radius:16px; padding:2.5rem; transition:all 0.3s ease; position:relative; overflow:hidden; cursor:pointer; }
+        .service-card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
+        .service-icon { width:60px; height:60px; background: var(--primary); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin-bottom:1.5rem; color:white; }
+        .service-card h3 { font-size:1.3rem; color: var(--primary); margin-bottom:1rem; }
+        .service-card p { color: var(--text); opacity:0.8; line-height:1.7; }
+
+        /* CONTACT SECTION */
+        .contact { padding:6rem 2rem; background: linear-gradient(135deg, var(--light) 0%, #e0f9f2 100%); }
+        .contact-form div { margin-bottom:1rem; display:flex; flex-direction:column; }
+        .contact-form input, .contact-form textarea, .contact-form select { padding:0.8rem; border-radius:6px; border:1px solid var(--border); font-size:1rem; }
+        .contact-form button { margin-top:1rem; }
+
+    </style>
+</head>
 <body>
 
-<!-- HEADER / NAVIGATION -->
-<header>
-  <nav class="navbar">
-    <h1>Peter Lesuruan</h1>
-    <p>Professional Land Surveyor</p>
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">Peter Lesuruan</a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <ul class="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
-  <h2>Accurate & Reliable Land Surveying Services</h2>
-  <p>
-    Providing professional land surveying solutions including boundary surveys,
-    topographic surveys, subdivision, and construction setting out across Kenya.
-  </p>
-  <a href="contact.html" class="btn">Request a Survey</a>
+    <div class="hero-content">
+        <span class="hero-badge">Professional Land Surveyor</span>
+        <h1>Accurate <span>Land Surveying</span> & Geomatics</h1>
+        <p class="hero-description">Providing precise surveying and mapping services to Maralal and surrounding areas, ensuring your land boundaries and projects are accurately measured.</p>
+        <div class="cta-group">
+            <a href="#contact" class="btn-primary">Book a Survey</a>
+            <a href="#services" class="btn-secondary">Our Services</a>
+        </div>
+    </div>
 </section>
 
-<!-- ABOUT SECTION -->
-<section class="about">
-  <h2>About Us</h2>
-  <p>
-    Peter Lesuruan is a professional land surveyor with extensive experience in land
-    surveying projects across Kenya. We provide accurate, legally compliant, and
-    reliable survey services for individuals, developers, and institutions.
-  </p>
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Services</span>
+            <h2 class="section-title">What We Offer</h2>
+            <p class="section-subtitle">Providing professional land surveying and geomatics solutions for accurate measurements and mapping.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📏</div>
+                <h3>Land Surveying</h3>
+                <p>Detailed surveys for property boundaries and legal documentation.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛰️</div>
+                <h3>GIS Mapping</h3>
+                <p>Advanced geographic information system mapping for planning and development projects.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <h3>Topographic Surveys</h3>
+                <p>Comprehensive surveys for construction, engineering, and design purposes.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- SERVICES SECTION -->
-<section class="services">
-  <h2>Our Land Surveying Services</h2>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">We are available in Maralal and surrounding areas for all land surveying and geomatics services.</p>
+        </div>
 
-  <ul>
-    <li><strong>Boundary Surveys</strong> – Identification and marking of land boundaries.</li>
-    <li><strong>Topographic Surveys</strong> – Mapping of land features and contours.</li>
-    <li><strong>Subdivision Surveys</strong> – Subdivision of land and title processing.</li>
-    <li><strong>Construction Setting Out</strong> – Accurate positioning of buildings and structures.</li>
-    <li><strong>Land Dispute Surveys</strong> – Boundary verification and expert survey reports.</li>
-    <li><strong>Site Planning & Mapping</strong> – Detailed site measurements and plans.</li>
-  </ul>
+        <div class="contact-info">
+            <p>📞 Phone: +254 725 560 802</p>
+            <p>✉️ Email: <a href="mailto:pegsjean@gmail.com">pegsjean@gmail.com</a></p>
+            <p>📍 Location: Maralal, Samburu County, Kenya</p>
+        </div>
+
+        <!-- WhatsApp Booking Form -->
+        <form id="whatsapp-form" class="contact-form" onsubmit="sendWhatsApp(event)">
+            <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div>
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                    <option value="">--Select a Service--</option>
+                    <option value="Land Surveying">Land Surveying</option>
+                    <option value="Topographic Survey">Topographic Survey</option>
+                    <option value="GIS Mapping">GIS Mapping</option>
+                    <option value="Property Boundary Verification">Property Boundary Verification</option>
+                    <option value="Construction Survey">Construction Survey</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send via WhatsApp</button>
+        </form>
+    </div>
 </section>
 
-<!-- PROJECTS PREVIEW -->
-<section class="projects">
-  <h2>Recent Survey Projects</h2>
+<script>
+function sendWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
 
-  <div class="project">
-    <img src="images/boundary-survey.jpg" alt="Boundary Survey">
-    <h3>Boundary Survey</h3>
-    <p>Maralal Town</p>
-  </div>
+    if(!name || !email || !service) { alert('Please fill all required fields!'); return; }
 
-  <div class="project">
-    <img src="images/topographic-survey.jpg" alt="Topographic Survey">
-    <h3>Topographic Survey</h3>
-    <p>Commercial Land</p>
-  </div>
+    let whatsappMessage = `Hello, I would like to book a land surveying service.\n\n`;
+    whatsappMessage += `Name: ${name}\nEmail: ${email}\nService Needed: ${service}\n`;
+    if(message) { whatsappMessage += `Message: ${message}`; }
 
-  <div class="project">
-    <img src="images/construction-setting.jpg" alt="Construction Setting Out">
-    <h3>Construction Setting Out</h3>
-    <p>Residential Project</p>
-  </div>
-</section>
-
-<!-- CONTACT CTA -->
-<section class="contact-cta">
-  <h2>Need a Professional Land Surveyor?</h2>
-  <p>Contact us today for accurate and reliable land survey services.</p>
-  <p><strong>📞 +254 725 560802</strong></p>
-  <p><strong>✉️ pegsjean@gmail.com</strong></p>
-  <a href="contact.html" class="btn">Contact Us</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2024 Peter Lesuruan | Professional Land Surveyor</p>
-  <p>Maralal Town, Kenya</p>
-</footer>
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappLink = `https://wa.me/254725560802?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
+}
+</script>
 
 </body>
 </html>
