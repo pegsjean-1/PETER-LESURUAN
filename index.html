@@ -1,31 +1,42 @@
-        <!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Peter Lesuruan | Professional Land Surveyor</title>
+<title>Peter Lesuruan Surveying | Professional Land Surveyor Kenya</title>
+
+<meta name="description" content="Professional land surveying services in Kenya including boundary surveys, subdivision surveys, GIS mapping, engineering surveys and topographic mapping.">
 
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial, sans-serif;
 margin:0;
 background:#f4f7fb;
+color:#333;
 }
 
 header{
 background:#0b4fa2;
 color:white;
-padding:20px;
 text-align:center;
+padding:25px;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
 }
 
 nav{
 background:#083a7a;
-padding:12px;
+padding:15px;
 text-align:center;
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -35,48 +46,116 @@ text-decoration:none;
 font-weight:bold;
 }
 
+nav a:hover{
+text-decoration:underline;
+}
+
 .hero{
-padding:60px;
+background:url("https://images.unsplash.com/photo-1590650046871-92c887180603");
+background-size:cover;
+background-position:center;
+padding:140px 20px;
 text-align:center;
-background:#e8f0ff;
+color:white;
 }
 
 .hero h1{
-color:#0b4fa2;
+font-size:40px;
 }
 
-.section{
-padding:50px;
-max-width:1000px;
+.hero button{
+padding:15px 30px;
+border:none;
+background:white;
+border-radius:6px;
+cursor:pointer;
+margin-top:20px;
+}
+
+.container{
+width:90%;
+max-width:1100px;
 margin:auto;
+padding:60px 0;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
 }
 
 .services{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.service-box{
+.card{
 background:white;
 padding:20px;
 border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:8px;
+}
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.step{
+background:white;
+padding:20px;
+border-left:5px solid #0b4fa2;
+}
+
+.equipment{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .contact{
 background:#0b4fa2;
 color:white;
 text-align:center;
-padding:40px;
+padding:60px 20px;
+}
+
+.contact input,.contact textarea{
+width:90%;
+max-width:500px;
+padding:12px;
+margin:10px;
+border:none;
+border-radius:5px;
 }
 
 button{
 background:#083a7a;
 color:white;
-padding:10px 20px;
+padding:12px 25px;
 border:none;
 border-radius:5px;
+cursor:pointer;
 }
 
 footer{
@@ -86,90 +165,147 @@ text-align:center;
 padding:20px;
 }
 
+.map{
+width:100%;
+height:350px;
+border:none;
+margin-top:20px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+}
+
 </style>
+
 </head>
 
 
 <body>
 
 <header>
-<h1>Peter Lesuruan</h1>
+
+<div class="logo">Peter Lesuruan Surveying</div>
 <p>Professional Land Surveyor | Maralal Town Kenya</p>
+
 </header>
 
+
 <nav>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#process">Survey Process</a>
+<a href="#equipment">Equipment</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 
 <section class="hero" id="home">
 
-<h1>Accurate Land Surveying Services</h1>
+<h1>Accurate Professional Land Surveying</h1>
 
-<p>
-Professional surveying services for land owners, developers, engineers and government projects.
-</p>
+<p>Boundary surveys, subdivision surveys, engineering surveys and GIS mapping</p>
 
-<a href="https://wa.me/254725560802">
-<button>Contact on WhatsApp</button>
+<a href="#contact">
+<button>Request Survey</button>
 </a>
 
 </section>
 
 
-<section class="section" id="about">
+<section class="container about" id="about">
+
+<img src="surveyor.jpg">
+
+<div>
 
 <h2>About Peter Lesuruan</h2>
 
 <p>
-Peter Lesuruan is a professional land surveyor based in Maralal Town Kenya with **9 years of experience** in land surveying, boundary demarcation, and mapping.
+
+Peter Lesuruan is a professional land surveyor based in Maralal Town Kenya with extensive experience in land surveying, mapping and geospatial data collection.
+
 </p>
 
 <p>
-He provides reliable and accurate survey services using modern equipment including GPS, Total Stations and GIS mapping systems.
+
+He provides accurate survey services for land owners, engineers, developers and government institutions using modern surveying technologies.
+
 </p>
+
+</div>
 
 </section>
 
 
-<section class="section" id="services">
+<section class="container" id="services">
 
 <h2>Land Surveying Services</h2>
 
 <div class="services">
 
-<div class="service-box">
-<h3>Boundary Survey</h3>
-<p>Identification and marking of land boundaries to prevent disputes.</p>
+<div class="card">
+<h3>Boundary Surveys</h3>
+<p>Establishing and marking legal property boundaries.</p>
 </div>
 
-<div class="service-box">
-<h3>Topographic Survey</h3>
-<p>Mapping land features for engineering and construction projects.</p>
+<div class="card">
+<h3>Subdivision Surveys</h3>
+<p>Dividing land into smaller legally recognized parcels.</p>
 </div>
 
-<div class="service-box">
-<h3>Subdivision Survey</h3>
-<p>Subdivision of land into smaller legally registered parcels.</p>
+<div class="card">
+<h3>Topographic Surveys</h3>
+<p>Mapping land elevations and natural features.</p>
 </div>
 
-<div class="service-box">
+<div class="card">
+<h3>Engineering Surveys</h3>
+<p>Supporting infrastructure and construction projects.</p>
+</div>
+
+<div class="card">
 <h3>Construction Setting Out</h3>
-<p>Positioning buildings, roads and structures accurately before construction.</p>
+<p>Accurate positioning of buildings and infrastructure.</p>
 </div>
 
-<div class="service-box">
+<div class="card">
 <h3>GIS Mapping</h3>
-<p>Digital land mapping and geographic data analysis.</p>
+<p>Digital spatial data mapping and analysis.</p>
 </div>
 
-<div class="service-box">
-<h3>Title Deed Survey</h3>
-<p>Verification and survey required for land title processing.</p>
+<div class="card">
+<h3>Title Deed Surveys</h3>
+<p>Survey verification for land title registration.</p>
+</div>
+
+<div class="card">
+<h3>Control Surveys</h3>
+<p>Establishing reference points for mapping projects.</p>
 </div>
 
 </div>
@@ -177,18 +313,88 @@ He provides reliable and accurate survey services using modern equipment includi
 </section>
 
 
-<section class="section" id="projects">
+<section class="container" id="process">
 
-<h2>Recent Survey Projects</h2>
+<h2>Survey Process</h2>
 
-<ul>
+<div class="process">
 
-<li>Boundary Survey – Samburu County</li>
-<li>Subdivision Survey – Maralal Town</li>
-<li>Topographic Survey – Road Construction Project</li>
-<li>GIS Mapping – Community Land Project</li>
+<div class="step">
+<h3>1. Site Visit</h3>
+<p>Surveyor inspects the land and collects initial information.</p>
+</div>
 
-</ul>
+<div class="step">
+<h3>2. Field Data Collection</h3>
+<p>Using GPS and total stations to collect accurate measurements.</p>
+</div>
+
+<div class="step">
+<h3>3. Data Processing</h3>
+<p>Survey data is processed using surveying software.</p>
+</div>
+
+<div class="step">
+<h3>4. Survey Map Preparation</h3>
+<p>Survey plans and maps are produced.</p>
+</div>
+
+<div class="step">
+<h3>5. Survey Report</h3>
+<p>Final documents are delivered to the client.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container" id="equipment">
+
+<h2>Survey Equipment</h2>
+
+<div class="equipment">
+
+<div class="card">
+<h3>GNSS GPS Receivers</h3>
+<p>High accuracy satellite positioning systems.</p>
+</div>
+
+<div class="card">
+<h3>Total Stations</h3>
+<p>Electronic instruments used for measuring angles and distances.</p>
+</div>
+
+<div class="card">
+<h3>Drones</h3>
+<p>Aerial mapping and photogrammetry.</p>
+</div>
+
+<div class="card">
+<h3>Survey Software</h3>
+<p>GIS, AutoCAD and mapping software.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="container" id="projects">
+
+<h2>Survey Project Gallery</h2>
+
+<div class="gallery">
+
+<img src="surveyor.jpg">
+
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+
+</div>
 
 </section>
 
@@ -197,27 +403,47 @@ He provides reliable and accurate survey services using modern equipment includi
 
 <h2>Contact Peter Lesuruan</h2>
 
+<form action="https://formspree.io/f/mykdovzn" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<br>
+
+<input type="email" name="email" placeholder="Your Email" required>
+<br>
+
+<textarea name="message" placeholder="Your Message"></textarea>
+<br>
+
+<button type="submit">Send Message</button>
+
+</form>
+
 <p>📍 Maralal Town, Kenya</p>
 
-<p>📞 Phone: +254 725 560802</p>
+<p>📞 +254 725 560802</p>
 
-<p>📧 Email: pegsjean@gmail.com</p>
+<p>📧 pegsjean@gmail.com</p>
 
-<a href="https://wa.me/254725560802">
-<button>Send WhatsApp Message</button>
-</a>
+<iframe class="map"
+src="https://maps.google.com/maps?q=Maralal%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
 
 </section>
 
 
 <footer>
 
-<p>
-© 2024 Peter Lesuruan | Professional Land Surveyor
-</p>
+<p>© 2024 Peter Lesuruan Surveying | Professional Land Surveyor Kenya</p>
 
 </footer>
 
 
+<a class="whatsapp" href="https://wa.me/254725560802?text=Hello%20I%20need%20a%20land%20survey">
+
+WhatsApp
+
+</a>
+
+
 </body>
-</html>
+</html>  
